@@ -5,7 +5,6 @@ from inference_sdk import InferenceHTTPClient
 
 TOKEN = "8798514063:AAHUIBaWbeBvIYRKAlvgoR0xVLj3in_oQqQ"
 
-
 CLIENT = InferenceHTTPClient(
     api_url="https://serverless.roboflow.com",
     api_key="حط_api_key_هنا"
@@ -24,7 +23,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
         use_cache=True
     )
 
-    count = len(result[0]["predictions"])
+count = 0
 
     await update.message.reply_text(f"🚗 عدد السيارات: {count}")
 
@@ -34,4 +33,3 @@ app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
 
 print("Bot Running...")
 app.run_polling()
-inference-sdk
