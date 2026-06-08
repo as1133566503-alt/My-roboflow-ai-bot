@@ -34,3 +34,4 @@ app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
 
 print("Bot Running...")
 app.run_polling()
+inference-sdk
